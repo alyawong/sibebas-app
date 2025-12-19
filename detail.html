@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadDetail()">
+  <div class="wrap" id="detailWrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">♻️</div>
+        <div>
+          <div id="appName">SecondChance</div>
+          <div class="sub" id="appTagline">Jual beli barang bekas</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="cart.html">🛒 Keranjang (<span id="cartBadge">0</span>)</a>
+        <a class="btn" href="home.html">⬅ Kembali</a>
+      </div>
+    </div>
+
+    <div class="centerCard" style="max-width:720px;">
+      <h2 id="name" class="title">Nama Barang</h2>
+      <img id="img" class="detailImg" src="" alt="Foto barang" />
+      <div class="block">
+        <div class="muted">Kondisi</div>
+        <div id="cond" style="font-weight:900; margin-top:4px;">-</div>
+      </div>
+
+      <div class="block">
+        <div class="muted">Harga</div>
+        <div id="price" style="font-weight:900; font-size:18px; margin-top:4px;">Rp0</div>
+      </div>
+
+      <div class="block">
+        <div class="muted">Deskripsi</div>
+        <div id="desc" style="margin-top:6px; line-height:1.5;">-</div>
+      </div>
+
+      <div class="row" style="margin-top:14px;">
+        <button class="btn btnPrimary" onclick="addToCart()">Tambah ke Keranjang</button>
+        <a class="btn" href="cart.html">Lihat Keranjang</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Keranjang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadCart()">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">♻️</div>
+        <div>
+          <div id="appName">SecondChance</div>
+          <div class="sub" id="appTagline">Jual beli barang bekas</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="home.html">⬅ Kembali</a>
+        <button class="btn btnDanger" onclick="clearCart()">Kosongkan</button>
+      </div>
+    </div>
+
+    <div id="cartList"></div>
+
+    <div class="totalBox">
+      <div>
+        <div class="muted">Total</div>
+        <div id="totalPrice" style="font-weight:900; font-size:18px;">Rp0</div>
+      </div>
+      <button class="btn btnPrimary" onclick="alert('Selamat anda berhasil check out!')">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

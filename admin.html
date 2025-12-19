@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Admin Produk - Sibebas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadAdmin()">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">♻️</div>
+        <div>
+          <div id="appName">Sibebas</div>
+          <div class="sub" id="appTagline">Admin Produk (CRUD)</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="home.html">⬅ Home</a>
+        <button class="btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <!-- Form CRUD -->
+    <div class="centerCard" style="max-width:900px; margin: 18px auto;">
+      <h2 class="title">Kelola Produk</h2>
+      <div class="note">Tambah / Edit / Hapus produk disimpan di localStorage.</div>
+
+      <div class="block">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div>
+            <div class="muted">Nama Barang</div>
+            <input id="pName" placeholder="Contoh: Kamera Bekas" />
+          </div>
+          <div>
+            <div class="muted">Harga (angka)</div>
+            <input id="pPrice" type="number" placeholder="Contoh: 250000" />
+          </div>
+          <div>
+            <div class="muted">Kondisi</div>
+            <input id="pCond" placeholder="Contoh: 90% mulus" />
+          </div>
+          <div>
+            <div class="muted">Path Foto</div>
+            <input id="pImage" placeholder="Contoh: Masukan foto" />
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <div class="muted">Deskripsi</div>
+          <input id="pDesc" placeholder="Deskripsi singkat barang..." />
+        </div>
+
+        <div class="row">
+          <button class="btn btnPrimary" onclick="createProduct()">Tambah</button>
+          <button class="btn" onclick="updateProduct()">Simpan Perubahan</button>
+          <button class="btn btnDanger" onclick="resetForm()">Reset Form</button>
+          <button class="btn btnDanger" onclick="resetProductsToDummy()">Reset Produk Dummy</button>
+        </div>
+
+        <div class="note">Klik tombol <b>Edit</b> pada tabel untuk mengisi form lalu klik <b>Simpan Perubahan</b>.</div>
+      </div>
+
+      <!-- Tabel produk -->
+      <div class="block">
+        <div style="font-weight:900; margin-bottom:10px;">Daftar Produk</div>
+        <div id="adminTable"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

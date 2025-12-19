@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadProducts()">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">♻️</div>
+        <div>
+          <div id="appName">SecondChance</div>
+          <div class="sub" id="appTagline">Jual beli barang bekas</div>
+        </div>
+      </div>
+
+    <div class="actions">
+      <a class="btn" href="admin.html"> Admin</a>
+      <a class="btn" href="cart.html">🛒 Keranjang (<span id="cartBadge">0</span>)</a>
+      <button class="btn" onclick="logout()">Logout</button>
+    </div>
+
+
+    <div class="grid" id="productList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
